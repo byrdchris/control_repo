@@ -5,6 +5,7 @@ node 'pm01.evilkittens.com' {
   file { '/root/README':
     ensure => file,
     content => $fqdn,
+    }
 }
 node /^web/ {
   include role::app_server
